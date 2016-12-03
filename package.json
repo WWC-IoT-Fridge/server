@@ -1,0 +1,30 @@
+{
+  "name": "fridge-server",
+  "version": "1.0.0",
+  "description": "web server hosted on heroku",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "eval $(cat .env) nodemon server.js",
+    "dev-debug": "eval $(cat .env) node-debug server.js"
+  },
+  "engines": {
+    "node": "5.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WWC-IoT-Fridge"
+  },
+  "author": "Whitney, Maya, Risa, Isil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WWC-IoT-Fridge/issues"
+  },
+  "homepage": "https://github.com/WWC-IoT-Fridge",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.13.4",
+    "mongoose": "^4.7.1",
+    "request": "^2.79.0"
+  }
+}
