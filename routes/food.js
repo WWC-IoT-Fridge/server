@@ -14,7 +14,13 @@ router.get('/', (req, res) => {
 });
 
 router.get('/expiresSoon', (req, res) => {
-  //logic here
+  //Food.where('exp').
+  var food = {};
+  food.name = "Chips";
+  food.UPC = "99999999"
+  food.exp = "2016-12-04"
+  res.send(food);
+
 })
 
 module.exports = router;
