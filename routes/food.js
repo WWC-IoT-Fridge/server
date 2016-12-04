@@ -13,4 +13,15 @@ router.get('/', (req, res) => {
   });
 });
 
+router.get('/expiresSoon', (req, res) => {
+  //logic here
+})
+
 module.exports = router;
+
+// GET api/food/
+// GET api/food/expiresSoon --expires in the next 3 days
+// GET api/food/expired --already expired
+//
+// POST api/food
+// DELETE api/food/:id

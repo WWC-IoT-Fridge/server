@@ -11,7 +11,7 @@ const Food = new Schema({
     require: false
   },
   exp: {
-    type: Date,
+    type: String,
     require: true
   }
 });
