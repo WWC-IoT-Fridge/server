@@ -15,11 +15,25 @@ router.get('/', (req, res) => {
 
 router.get('/expiresSoon', (req, res) => {
   //Food.where('exp').
-  var food = {};
-  food.name = "Chips";
-  food.UPC = "99999999"
-  food.exp = "2016-12-04"
-  res.send(food);
+  var chips = {};
+  chips.name = "Chips";
+  chips.UPC = "99999999";
+  chips.exp = "2016-12-03";
+
+  var dip = { 
+  	name : "Chip Dip", 
+  	UPC : "123456",
+  	exp : "2016-12-01"};
+
+  var soda = {
+  	name : "Fizzy Drink",
+  	UPC : "898989898",
+  	exp : "2016-11-02"};
+
+  var foods = [chips, dip, soda];	
+ 
+
+  res.send(foods);
 
 })
 
