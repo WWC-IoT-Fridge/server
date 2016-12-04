@@ -20,8 +20,8 @@ router.get('/expiresSoon', (req, res) => {
   chips.UPC = "2348962938";
   chips.exp = "2016-12-06";
 
-  var dip = { 
-  	name : "Daiya Cheese", 
+  var dip = {
+  	name : "Daiya Cheese",
   	UPC : "8266234896923",
   	exp : "2016-12-05"};
 
@@ -36,8 +36,8 @@ router.get('/expiresSoon', (req, res) => {
   	UPC : "348579664846",
   	exp : "2016-11-07"};
 
-  var foods = [yogurt, chips, dip, soda];	
- 
+  var foods = [yogurt, chips, dip, soda];
+
 
   res.send(foods);
 
@@ -50,8 +50,8 @@ router.get('/expired', (req, res) => {
   chips.UPC = "99999999";
   chips.exp = "2016-12-03";
 
-  var dip = { 
-  	name : "Chip Dip", 
+  var dip = {
+  	name : "Chip Dip",
   	UPC : "123456",
   	exp : "2016-12-01"};
 
@@ -60,12 +60,17 @@ router.get('/expired', (req, res) => {
   	UPC : "898989898",
   	exp : "2016-11-02"};
 
-  var foods = [chips, dip, soda];	
- 
+  var foods = [chips, dip, soda];
+
 
   res.send(foods);
 
-})
+});
+
+router.post('/', (req, res) => {
+  console.log(req.body);
+  res.send('success');
+});
 
 module.exports = router;
 
