@@ -9,7 +9,7 @@
     "dev-debug": "eval $(cat .env) node-debug server.js"
   },
   "engines": {
-    "node": "5.5.0"
+    "node": "7.2.0"
   },
   "repository": {
     "type": "git",
