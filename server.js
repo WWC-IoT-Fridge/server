@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 const dbURI = process.env.DB_URI;
-import app from './app';
+const app = require('./app');
 mongoose.Promise = global.Promise;
 
 if (process.env.NODE_ENV !== 'development') {
