@@ -1,9 +1,9 @@
-import express from 'express';
+const express = require('express');
 const app = express();
-import path from 'path'; 
+const path = require('path');
 const publicPath = path.join( __dirname, 'public' );
-import food from './routes/food';
-import bodyParser from 'body-parser';
+const food = require('./routes/food');
+const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -19,4 +19,4 @@ app.use(function(req, res, next) {
   res.status(404).send('404, no page found: ' + req.url);
 });
 
-export default app;
+module.exports = app;

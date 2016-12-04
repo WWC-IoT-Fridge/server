@@ -1,4 +1,5 @@
-import mongoose, { Schema } from 'mongoose';
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const Food = new Schema({
   name: {
@@ -15,4 +16,4 @@ const Food = new Schema({
   }
 });
 
-export default mongoose.model('Food', Food);
+module.exports = mongoose.model('Food', Food);

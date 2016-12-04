@@ -1,6 +1,6 @@
-import { Router as router } from 'express';
-import mongoose from 'mongoose';
-import Food from '../models/Food';
+const router = require('express').Router();
+const mongoose = require( 'mongoose' );
+const Food = require('../models/Food');
 
 //GET all food in fridge
 router.get('/', (req, res) => {
